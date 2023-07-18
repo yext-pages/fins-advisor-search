@@ -28,7 +28,7 @@ export const getHeadConfig: GetHeadConfig<
 > = (): HeadConfig => {
   return {
     //Update title to match Search starter
-    title: `Basic Search`,
+    title: `Financial Advisors Search`,
     charset: "UTF-8",
     viewport: "width=device-width, initial-scale=1",
   };
@@ -36,8 +36,7 @@ export const getHeadConfig: GetHeadConfig<
 
 export const SEARCHER = provideHeadless({
   apiKey: apiKey,
-  // comment in the verticalKey if you are building a vertical-only search experience
-  // verticalKey: "REPLACE_ME_VERTICAL_KEY",
+  verticalKey: "financial_professionals",
   experienceKey: experienceKey,
   locale: locale,
   experienceVersion: experienceVersion,
