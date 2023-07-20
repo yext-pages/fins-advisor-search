@@ -92,7 +92,9 @@ const Static: Template<TemplateRenderProps> = ({
 
   return (
     <>
-      <h1>Static Page</h1>
+    <a href="/search" target = "_blank" rel="noreferrer">
+      <h1 className="font-extrabold hover:underline hover:text-blue-900">Click here to view search experience</h1>
+      </a>
     </>
   );
 };
