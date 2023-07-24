@@ -23,7 +23,7 @@ const ProfessionalsCard = ({
         headshot: result.rawData.headshot,
         landingPageUrl: result.rawData.landingPageUrl,
         address: result.rawData.address,
-        mainPhone: result.rawData.mainPhone,
+        formattedPhone: `${result.rawData.mainPhone.substring(0, 2)} (${result.rawData.mainPhone.substring(2, 5)}) ${result.rawData.mainPhone.substring(5, 8)}-${result.rawData.mainPhone.substring(8)}`,
         languages: result.rawData.languages,
         interests: result.rawData.interests,
         job: result.rawData.fins_jobTitle,
@@ -71,7 +71,7 @@ const ProfessionalsCard = ({
               <h2 className="text-lg font-semibold mb-2 text-blue-900">{data.job}</h2>
               <div className="flex mb-1 justify-between space-x-10">
                 <p className="min-w-fit">{data.address.line1}</p>
-                <p className="ml-auto">{data.mainPhone}</p>
+                <p className="ml-auto">{data.formattedPhone}</p>
               </div>
               <div className="flex mb-1 justify-between space-x-10">
                 <p className="min-w-fit">{`${data.address.city}, ${data.address.region} ${data.address.postalCode}`}</p>
